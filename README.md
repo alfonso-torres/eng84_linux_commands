@@ -137,4 +137,4 @@ Proxy SSH into our private network: `ssh -i ~/.ssh/local.pem -o ProxyCommand="ss
 sudo apt-get update -y
 ````
 
-Click on the [link](https://ubuntu.com/tutorials/command-line-for-beginners#9-conclusion) to follow a guide of using command line in linux.
+Click on the [link](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) to follow a guide of using command line in linux.
