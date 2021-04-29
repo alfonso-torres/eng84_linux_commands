@@ -4,15 +4,17 @@
 
 Let's practice with some linux commands:
 
-1. How to check Hidden Files and Directories.
+__1. How to check Hidden Files and Directories__
 
 `ls -al`
 
-2. The Manual, Flags.
+__2. The Manual, Flags__
 
-`man man`
+Flags are a way to set options and pass in arguments to the commands you run. These will change the behaviour of the commands.
 
-3. What is a wildecards and How to use Wildcards.
+`man man`: you can check what are the flags.
+
+__3. What is a wildecards and How to use Wildcards__
 
 A wildcard in Linux is a symbol or a set of symbols that stands in for other characters. It can be used to substitute for any other character or characters in a string. For example, you can use a wildcard to get a list of all files in a directory that begin with the letter O: `ls -l O*`
 
@@ -20,39 +22,42 @@ A wildcard in Linux is a symbol or a set of symbols that stands in for other cha
 	- `.`: Current folder
 	- `..`: Up one folder
 
-4. How can do you Process Management.
+- `?`: single occurrence of any character. Example: `ls l?st.txt` lists files starting with l and ending with st.txt.
+- `[]` - matches any occurrence of a character in the brackets. Example: `ls [abc]ist.txt` lists files starting with one of the characters inside the brackets and ends with ist.txt.
+
+__4. How can do you Process Management__
 
 To find the process ID and parent process ID of the current shell, run:
 
 - `echo $$`
 - `echo $PPID`
 
-Manage a running process: `ps`
+- `sudo systemctl` - controls a single process with `status`, `start`, `stop` or `restart`. For example:  `systemctl status nginx` checks if nginx is running.
 
 Click on the [link](https://opensource.com/article/18/9/linux-commands-process-management) to have a look of the commands.
 
-5. What is Currently Running on your system.
+__5. What is Currently Running on your system__
 
 - `top`: task manager.
 - `ps`: to lists running processes. Or `sudo ps -a`.
 - - Use the following command to list Linux processes along with pid, user name, stat as follows: `ps -eo pid,user,stat,comm`.
 - You can combine ps with grep command command as follows: `ps -eo pid,user,stat,comm | grep nginx`.
 
-6. Killing a process/Crashed Process.
+__6. Killing a process/Crashed Process__
 
 - `kill pid`: to kill a process based on its pid.
 
-7. How to check any process running in the Foreground and Background Jobs.
+__7. How to check any process running in the Foreground and Background Jobs__
 
 - `sudo ps -aux | less`
 - `ps aux | more`
 - List your background processes: `jobs`.
 
-8. How to stop/kill any process running in the Foregroung and Background Jobs.
+__8. How to stop/kill any process running in the Foregroung and Background Job__.
 
 - `kill pid`: to kill a process based on its pid. Take the pid from the previous command.
 
-9. How to change permissions with chmod command.
+__9. How to change permissions with chmod command__
 
 - `chmod (+rwx | -rwx)`: to change permissions
 
@@ -64,11 +69,11 @@ Click on the [link](https://opensource.com/article/18/9/linux-commands-process-m
     - `400`: same as 777 but only for the issuing user
     - `600`: same as 777 but only for the file owner and restricts all others
 
-10. How to check permission for files/dir.
+__10. How to check permission for files/dir__
 
 - `ll`: to check permissions
 
-11. How to use head, tail, sort, nl (number line), wc (word count)
+__11. How to use head, tail, sort, nl (number line), wc (word count)__
 
 - `head`: prints first 10 lines of a file.
 - `tail`: prints last 10 lines of a file.
@@ -76,7 +81,7 @@ Click on the [link](https://opensource.com/article/18/9/linux-commands-process-m
 - `nl`: prints a file with numbered lines.
 - `wc`: print out a word count.
 
-12. What is piping and redirection, HINT > indicates to the command line.
+__12. What is piping and redirection, HINT > indicates to the command line__
 
 Two such advantages are the use of pipes and redirection. With pipes and redirection, you can "chain" multiple programs to become extremely powerful commands. Most programs on the command-line accept different modes of operation. Many can read and write to files for data, and most can accept standard input or output. This means that you can direct the output of one program as input to another program. You can then take the output of the second program and redirect it as input to yet another program, or redirect the output to a file.
 
@@ -91,7 +96,7 @@ So:
 - `cmd > file`: redirect output into a file and overwrite the contents.
 - `cmd >> file`: redirect output into a file and append it to the end.
 
-13. What is STDIN standard input and output.
+__13. What is STDIN standard input and output__
 
 The standard input device, also referred to as stdin, is the device from which input to the system is taken. Typically this is the keyboard, but you can specify that input is to come from a serial port or a disk file, for example. The standard output device, also referred to as stdout, is the device to which output from the system is sent. Typically this is a display, but you can redirect output to a serial port or a file.
 
